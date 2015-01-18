@@ -1,0 +1,339 @@
+@font-face {
+    font-family: group_island_font;
+    src: url("../css_fonts/Showcard_Gothic.ttf");
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+#container {
+	width: 1083px;
+	margin: 0px auto;
+	height: 100%;
+}
+
+#container .button {
+	cursor: pointer;
+}
+
+/* below are the designs for the home content */
+
+#container #home_content_background {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 1083px;
+	height: 100%;
+	z-index: 0;
+	display: none;
+}
+
+#container #home_content {
+	display: none;
+}
+
+#container #home_content #start_discussion {
+	position: relative;
+	top: -900px;
+	left: 65px;
+} 
+
+#container #home_content #credits {
+	position: relative;
+	top: -800px;
+	left: -240px;
+} 
+
+#container #home_content #exit {
+	position: relative;
+	top: -720px;
+	left: -468px;
+	
+} 
+
+#container #home_content #philippine_map {
+	position: relative;
+	z-index: 2;
+	top: -530px;
+	left: -345px;
+}
+
+#container #home_content #globeball {
+	position: relative;
+	z-index: 2;
+	top: -780px;
+	left: 800px;
+}
+
+
+#container #home_content #letter_t {
+	position: relative;
+	z-index: 3;
+	top: -1264px;
+	left: -80px;
+}
+
+#container #home_content #letter_h {
+	position: relative;
+	z-index: 3;
+	top: -1268px;
+	left: -85px;
+}
+
+#container #home_content #letter_e {
+	position: relative;
+	z-index: 3;
+	top: -1277px;
+	left: -85px;
+}
+
+#container #home_content #letter_ph {
+	position: relative;
+	z-index: 3;
+	top: -1277px;
+	left: 0px;
+}
+
+/* below are the designs for the discussion content */
+
+#container #start_discussion_background {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 1083px;
+	height: 100%;
+	z-index: 0;
+	
+}
+
+#container #discussion_content {
+
+}
+
+#container #discussion_content #first_rope {
+	position: relative;
+	z-index: 2;
+	top: -688px;
+	left: 85px;
+}
+
+#container #discussion_content #luzon {
+	position: relative;
+	z-index: 3;
+	top: -630px;
+	left: -70px;
+}
+
+#container #discussion_content #second_rope {
+	position: relative;
+	z-index: 2;
+	top: -571px;
+	left: -234px;
+}
+
+#container #discussion_content #visayas {
+	position: relative;
+	z-index: 3;
+	top: -513px;
+	left: -390px;
+}
+
+#container #discussion_content #third_rope {
+	position: relative;
+	z-index: 2;
+	top: -458px;
+	left: -558px;
+}
+
+#container #discussion_content #mindanao {
+	position: relative;
+	z-index: 3;
+	top: -403px;
+	left: -710px;
+}
+
+#container #discussion_content #fourth_rope {
+	position: relative;
+	z-index: 2;
+	top: -353px;
+	left: -882px;
+}
+
+#container #discussion_content #home_back {
+	position: relative;
+	z-index: 3;
+	top: -1000px;
+	left: 65px;
+}
+
+#container #discussion_content #discuss_background {
+	position: relative;
+	z-index: 4;
+	top: -763px;
+	left: 164px;
+}
+
+#container #discussion_content #luzon_separate {
+	position: relative;
+	z-index: 5;
+	top: -1417px;
+	left: 520px;
+}
+
+#container #discussion_content #visayas_separate {
+	position: relative;
+	z-index: 5;
+	top: -1460px;
+	left: 420px;
+}
+
+#container #discussion_content #mindanao_separate {
+	position: relative;
+	z-index: 5;
+	top: -1307px;
+	left: 173px;
+}
+
+#container #discussion_content .text_wrap {
+	z-index: 7;
+	color: #548700;
+	font-size: 30px;
+	font-family: group_island_font;
+	text-align: center;
+}
+
+
+#container #discussion_content #luzon_text_wrap {
+	width: 300px;
+	position: relative;
+	top: -1890px;
+	left: 370px;
+}
+
+#container #discussion_content #visayas_text_wrap {
+	width: 300px;
+	position: relative;
+	top: -1900px;
+	left: 770px;
+}
+
+#container #discussion_content #mindanao_text_wrap {
+	width: 300px;
+	position: relative;
+	top: -1700px;
+	left: 400px;
+}
+
+/* below visayas featured popup */
+
+#container #discussion_content #visayas_feature_one {
+	position: relative;
+	top: -2000px;
+	left: 800px;
+	z-index: 7;
+}
+
+#container #discussion_content #visayas_feature_two {
+	position: relative;
+	top: -1950px;
+	left: 580px;
+	z-index: 7;
+}
+
+#container #discussion_content .visayas_feature {
+	display: none;
+}
+
+/* below mindanao featured popup */
+
+#container #discussion_content #mindanao_feature_one {
+	position: relative;
+	top: -1870px;
+	left: 860px;
+	z-index: 7;
+}
+
+#container #discussion_content #mindanao_feature_two {
+	position: relative;
+	top: -1790px;
+	left: 790px;
+	z-index: 7;
+}
+
+#container #discussion_content #mindanao_feature_three {
+	position: relative;
+	top: -1850px;
+	left: 670px;
+	z-index: 7;
+}
+
+#container #discussion_content .mindanao_feature {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
