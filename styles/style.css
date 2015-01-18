@@ -202,42 +202,45 @@ body {
 	font-size: 30px;
 	font-family: group_island_font;
 	text-align: center;
-}
 
+}
 
 #container #discussion_content #luzon_text_wrap {
 	width: 300px;
 	position: relative;
 	top: -1890px;
 	left: 370px;
+	display: none;
 }
 
 #container #discussion_content #visayas_text_wrap {
 	width: 300px;
 	position: relative;
-	top: -1900px;
+	top: -1787px;
 	left: 770px;
+	display: none;
 }
 
 #container #discussion_content #mindanao_text_wrap {
 	width: 300px;
 	position: relative;
-	top: -1700px;
+	top: -1470px;
 	left: 400px;
+	display: none;
 }
 
 /* below visayas featured popup */
 
 #container #discussion_content #visayas_feature_one {
 	position: relative;
-	top: -2000px;
-	left: 800px;
+	top: -1775px;
+	left: 820px;
 	z-index: 7;
 }
 
 #container #discussion_content #visayas_feature_two {
 	position: relative;
-	top: -1950px;
+	top: -1720px;
 	left: 580px;
 	z-index: 7;
 }
@@ -250,21 +253,21 @@ body {
 
 #container #discussion_content #mindanao_feature_one {
 	position: relative;
-	top: -1870px;
+	top: -1640px;
 	left: 860px;
 	z-index: 7;
 }
 
 #container #discussion_content #mindanao_feature_two {
 	position: relative;
-	top: -1790px;
+	top: -1560px;
 	left: 790px;
 	z-index: 7;
 }
 
 #container #discussion_content #mindanao_feature_three {
 	position: relative;
-	top: -1850px;
+	top: -1620px;
 	left: 670px;
 	z-index: 7;
 }

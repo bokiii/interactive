@@ -29,24 +29,32 @@ var buttonModule = (function() {
 			
 			$(this).attr('src', $(this).attr('src').replace(/\.png/, '_shadow.png'));
 			
+			var $has_luzon_feature = $(this).hasClass("luzon_featured");
 			var $has_visayas_feature = $(this).hasClass("visayas_featured");
 			var $has_mindanao_feature = $(this).hasClass("mindanao_featured");
 			var $has_sidebar_button = $(this).hasClass("sidebar_button");
 			
-			if($has_visayas_feature) {
-				$(document).find(".visayas_feature").show();
-				
+			if($has_luzon_feature) {
+				$(document).find("#luzon_text_wrap").show();
 				if($has_sidebar_button) {
-					console.log($("#visayas_separate").attr('src'));
+					$("#luzon_separate").attr('src', $("#luzon_separate").attr('src').replace(/\.png/, '_shadow.png'));
+					hovered_sidebar = "luzon";
+				}
+			}
+			
+			if($has_visayas_feature) {
+				$(document).find("#visayas_text_wrap").show();
+				$(document).find(".visayas_feature").show();
+				if($has_sidebar_button) {
 					$("#visayas_separate").attr('src', $("#visayas_separate").attr('src').replace(/\.png/, '_shadow.png'));
 					hovered_sidebar = "visayas";
 				}
 			}
 			
 			if($has_mindanao_feature) {
+				$(document).find("#mindanao_text_wrap").show();
 				$(document).find(".mindanao_feature").show();
 				if($has_sidebar_button) {
-					console.log($("#visayas_separate").attr('src'));
 					$("#mindanao_separate").attr('src', $("#mindanao_separate").attr('src').replace(/\.png/, '_shadow.png'));
 					hovered_sidebar = "mindanao";
 				}
@@ -56,8 +64,18 @@ var buttonModule = (function() {
 			
 			$(this).attr('src', $(this).attr('src').replace(/\_shadow.png/, '.png'));
 			
+			$(document).find("#luzon_text_wrap").hide();
+			
 			$(document).find(".visayas_feature").hide();
+			$(document).find("#visayas_text_wrap").hide();
+			
 			$(document).find(".mindanao_feature").hide();
+			$(document).find("#mindanao_text_wrap").hide();
+		
+			if(hovered_sidebar == "luzon") {
+				$("#luzon_separate").attr('src', $("#luzon_separate").attr('src').replace(/\_shadow.png/, '.png'));
+				
+			}
 		
 			if(hovered_sidebar == "visayas") {
 				$("#visayas_separate").attr('src', $("#visayas_separate").attr('src').replace(/\_shadow.png/, '.png'));

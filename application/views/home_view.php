@@ -33,7 +33,7 @@
 		<div id="discussion_content">
 			<!-- below is first rope then luzon -->
 			<img src="<?php echo base_url(); ?>images/rope.png" alt="first rope" id="first_rope" />
-			<img src="<?php echo base_url(); ?>images/luzon.png" alt="luzon" id="luzon" class='button' />
+			<img src="<?php echo base_url(); ?>images/luzon.png" alt="luzon" id="luzon" class='button luzon_featured sidebar_button' />
 			
 			<!-- below is second rope then visayas -->
 			<img src="<?php echo base_url(); ?>images/rope.png" alt="second rope" id="second_rope" />
@@ -50,7 +50,7 @@
 			<!-- below is for the discuss -->
 			<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="Discussion background" id="discuss_background"/>
 			
-			<img src="<?php echo base_url(); ?>images/luzon_separate.png" alt="Luzon Separate" id="luzon_separate" class='button'/>
+			<img src="<?php echo base_url(); ?>images/luzon_separate.png" alt="Luzon Separate" id="luzon_separate" class='button luzon_featured'/>
 			<img src="<?php echo base_url(); ?>images/visayas_separate.png" alt="Visayas Separate" id="visayas_separate" class='button visayas_featured'/>
 			<img src="<?php echo base_url(); ?>images/mindanao_separate.png" alt="Mindanao Separate" id="mindanao_separate" class='button mindanao_featured'/>
 		
