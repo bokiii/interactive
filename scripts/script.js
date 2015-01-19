@@ -24,7 +24,7 @@ var buttonModule = (function() {
 	var hovered_sidebar;
 	
 	var buttonHover = function() {
-		//console.log($(document).find(".home_button").attr("src"));
+	
 		$(".button").mouseenter(function(){
 			
 			$(this).attr('src', $(this).attr('src').replace(/\.png/, '_shadow.png'));
@@ -103,26 +103,36 @@ buttonModule.buttonHover();
 
 var exchangeModule = (function(){
 	
-	var home_to_start = function() {
+	var $home_src; 
+	
+	var home_to_start_discussion = function() {
 		$("#start_discussion").click(function(){
-			$("#home_content_background").fadeOut("fast", function(){
-				$("#home_content").fadeOut("fast");
-				$(document).find("#start_discussion_background").show("fast", function(){
-					$(document).find("#discussion_content").slideDown("slow");
-				});
-			});
+			$home_src = $("#home_content_background").attr('src');
+			$("#home_content").hide("fast");
+			$("#home_content_background").attr('src', $("#home_content_background").attr('src').replace(/\home.png/, 'start_discussion_background.png'));
+			$("#discussion_content").fadeIn("slow");
 		});
 	}
 	
+	var start_discussion_to_home = function() {
+		$("#home_back").click(function(){
+			$("#home_content_background").attr('src', $home_src);
+			$("#discussion_content").hide("fast");
+			$("#home_content").fadeIn("slow");
+		});
+	};
+	
 	return {
-		home_to_start: home_to_start
+		home_to_start_discussion: 	home_to_start_discussion,
+		start_discussion_to_home:	start_discussion_to_home
 	}
 	
 })()
 
 // execute exchange module below 
 
-exchangeModule.home_to_start();
+exchangeModule.home_to_start_discussion();
+exchangeModule.start_discussion_to_home();
 
 
 

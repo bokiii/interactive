@@ -27,11 +27,10 @@ body {
 	width: 1083px;
 	height: 100%;
 	z-index: 0;
-	display: none;
 }
 
 #container #home_content {
-	display: none;
+	
 }
 
 #container #home_content #start_discussion {
@@ -105,11 +104,11 @@ body {
 	width: 1083px;
 	height: 100%;
 	z-index: 0;
-	
+	display: none;
 }
 
 #container #discussion_content {
-
+	display: none;
 }
 
 #container #discussion_content #first_rope {

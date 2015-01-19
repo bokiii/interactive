@@ -28,7 +28,7 @@
 		</div>
 		
 		<!-- below is the background for the discussion -->
-		<img src="<?php echo base_url(); ?>images/start_discussion_background.png" alt="Start Discussion Background" id="start_discussion_background" />
+		<img src="<?php echo base_url(); ?>images/start_discussion_background.png" alt="Start Discussion Background" id="start_discussion_background" />	
 		
 		<div id="discussion_content">
 			<!-- below is first rope then luzon -->
@@ -77,10 +77,9 @@
 			<img src="<?php echo base_url(); ?>images/mindanao_feature_two.png" alt="Mindanao Feature" id="mindanao_feature_two" class="mindanao_feature" />
 			<img src="<?php echo base_url(); ?>images/mindanao_feature_three.png" alt="Mindanao Feature" id="mindanao_feature_three" class="mindanao_feature" />
 			
-			
-		
 		</div>
 		
+		<!-- below are the scripts -->
 		<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jquery2.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jqueryui.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jquery.form.js"></script>
