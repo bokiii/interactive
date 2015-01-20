@@ -27,32 +27,34 @@
 			<img src="<?php echo base_url(); ?>images/philippines.png" alt="letter philippines" id="letter_ph" />
 		</div>
 		
-		<!-- below is the background for the discussion -->
-		<img src="<?php echo base_url(); ?>images/start_discussion_background.png" alt="Start Discussion Background" id="start_discussion_background" />	
+		<!-- below is the discussion content -->
+		
 		
 		<div id="discussion_content">
+			
 			<!-- below is first rope then luzon -->
-			<img src="<?php echo base_url(); ?>images/rope.png" alt="first rope" id="first_rope" />
-			<img src="<?php echo base_url(); ?>images/luzon.png" alt="luzon" id="luzon" class='button luzon_featured sidebar_button' />
+			<img src="<?php echo base_url(); ?>images/rope.png" alt="first rope" id="first_rope" class="main_discussion" />
+			<img src="<?php echo base_url(); ?>images/luzon.png" alt="luzon" id="luzon" class='button luzon_featured sidebar_button main_discussion select_group' />
 			
 			<!-- below is second rope then visayas -->
-			<img src="<?php echo base_url(); ?>images/rope.png" alt="second rope" id="second_rope" />
-			<img src="<?php echo base_url(); ?>images/visayas.png" alt="visayas" id="visayas" class='button visayas_featured sidebar_button' />
+			<img src="<?php echo base_url(); ?>images/rope.png" alt="second rope" id="second_rope" class="main_discussion" />
+			<img src="<?php echo base_url(); ?>images/visayas.png" alt="visayas" id="visayas" class='button visayas_featured sidebar_button main_discussion' />
 			
 			<!-- below is third rope then mindanao -->
-			<img src="<?php echo base_url(); ?>images/rope.png" alt="third rope" id="third_rope" />
-			<img src="<?php echo base_url(); ?>images/mindanao.png" alt="mindanao" id="mindanao" class='button mindanao_featured sidebar_button' />
+			<img src="<?php echo base_url(); ?>images/rope.png" alt="third rope" id="third_rope" class="main_discussion" />
+			<img src="<?php echo base_url(); ?>images/mindanao.png" alt="mindanao" id="mindanao" class='button mindanao_featured sidebar_button main_discussion' />
 			
 			<!-- below is fourth rope then back -->
-			<img src="<?php echo base_url(); ?>images/rope.png" alt="fourth rope" id="fourth_rope" />
-			<img src="<?php echo base_url(); ?>images/back.png" alt="Home Back" id="home_back" class='button' />
+			<img src="<?php echo base_url(); ?>images/rope.png" alt="fourth rope" id="fourth_rope" class="main_discussion" />
+			<img src="<?php echo base_url(); ?>images/back.png" alt="Home Back" id="home_back" class='button main_discussion' />
 			
-			<!-- below is for the discuss -->
-			<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="Discussion background" id="discuss_background"/>
 			
-			<img src="<?php echo base_url(); ?>images/luzon_separate.png" alt="Luzon Separate" id="luzon_separate" class='button luzon_featured'/>
-			<img src="<?php echo base_url(); ?>images/visayas_separate.png" alt="Visayas Separate" id="visayas_separate" class='button visayas_featured'/>
-			<img src="<?php echo base_url(); ?>images/mindanao_separate.png" alt="Mindanao Separate" id="mindanao_separate" class='button mindanao_featured'/>
+			<!-- below is for the discuss background -->
+			<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="Discussion background" id="discuss_background" class="main_discussion" />
+			
+			<img src="<?php echo base_url(); ?>images/luzon_separate.png" alt="Luzon Separate" id="luzon_separate" class='button luzon_featured main_discussion'/>
+			<img src="<?php echo base_url(); ?>images/visayas_separate.png" alt="Visayas Separate" id="visayas_separate" class='button visayas_featured main_discussion'/>
+			<img src="<?php echo base_url(); ?>images/mindanao_separate.png" alt="Mindanao Separate" id="mindanao_separate" class='button mindanao_featured main_discussion'/>
 		
 			<!-- below are the popups of selections-->
 			
@@ -76,6 +78,23 @@
 			<img src="<?php echo base_url(); ?>images/mindanao_feature_one.png" alt="Mindanao Feature" id="mindanao_feature_one" class="mindanao_feature" />
 			<img src="<?php echo base_url(); ?>images/mindanao_feature_two.png" alt="Mindanao Feature" id="mindanao_feature_two" class="mindanao_feature" />
 			<img src="<?php echo base_url(); ?>images/mindanao_feature_three.png" alt="Mindanao Feature" id="mindanao_feature_three" class="mindanao_feature" />
+		
+		</div>
+		
+		
+		<div id="group_discussion_content">
+			
+			<div id="left_content" class="left">
+				<img src="<?php echo base_url(); ?>images/rope.png" alt="left rope" id="left_rope" class="left" />
+				<div class="clear"></div>
+				<img src="<?php echo base_url(); ?>images/big_back.png" alt="Big Back" id="big_back" class="left button" />
+			</div>
+			
+			<div id="right_content" class="right">
+				<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="right background" id="right_background" class="right" />
+			</div>
+			
+			<div class="clear"></div>
 			
 		</div>
 		

@@ -19,7 +19,7 @@ html.css('overflow', html.data('previous-overflow'));
 window.scrollTo(scrollPosition[0], scrollPosition[1])*/
 
 
-var buttonModule = (function() {
+var buttonModule = (function(){
 	
 	var hovered_sidebar;
 	
@@ -122,9 +122,17 @@ var exchangeModule = (function(){
 		});
 	};
 	
+	var group_to_start_discussion = function() {
+		$("#big_back").click(function(){
+			$("#group_discussion_content").hide("fast");
+			$(".main_discussion").fadeIn("slow");
+		});
+	};
+	
 	return {
 		home_to_start_discussion: 	home_to_start_discussion,
-		start_discussion_to_home:	start_discussion_to_home
+		start_discussion_to_home:	start_discussion_to_home,
+		group_to_start_discussion: group_to_start_discussion
 	}
 	
 })()
@@ -133,6 +141,32 @@ var exchangeModule = (function(){
 
 exchangeModule.home_to_start_discussion();
 exchangeModule.start_discussion_to_home();
+exchangeModule.group_to_start_discussion();
+
+
+var islandModule = (function(){
+
+	var luzon_select = function() {
+	
+		$(".select_group").click(function(){
+			$(".main_discussion").hide("fast");
+			$("#group_discussion_content").fadeIn("slow");
+		});
+	}
+	
+	return {
+		luzon_select:	luzon_select
+	}
+	
+})()
+
+// execute home module below
+
+islandModule.luzon_select();
+
+
+
+
 
 
 

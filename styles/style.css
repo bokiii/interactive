@@ -3,6 +3,18 @@
     src: url("../css_fonts/Showcard_Gothic.ttf");
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
 body {
 	padding: 0px;
 	margin: 0px;
@@ -97,7 +109,7 @@ body {
 
 /* below are the designs for the discussion content */
 
-#container #start_discussion_background {
+/*#container #start_discussion_background {
 	position: relative;
 	top: 0px;
 	left: 0px;
@@ -105,7 +117,7 @@ body {
 	height: 100%;
 	z-index: 0;
 	display: none;
-}
+}*/
 
 #container #discussion_content {
 	display: none;
@@ -274,6 +286,50 @@ body {
 #container #discussion_content .mindanao_feature {
 	display: none;
 }
+
+
+/* below is the design for clicking each specific group of island, let us start the z-index to 8 */
+
+#container #group_discussion_content {
+	width: 1081px;
+	height: 668px;
+	position: relative;
+	top: -675px;
+	left: 0px;
+	z-index: 8;
+	display: none;
+}
+
+#container #group_discussion_content #left_content {
+	width: 305px;
+	height: 668px;
+}
+
+#container #group_discussion_content #left_content #left_rope {
+	margin-left: 84px;
+}
+
+#container #group_discussion_content #left_content #big_back {
+	margin-left: 35px;
+	margin-top: -28px;
+}
+
+#container #group_discussion_content #right_content {
+	width: 768px;
+	height: 668px;
+}
+
+#container #group_discussion_content #right_content #right_background {
+	margin-right: -2px;
+	margin-top: -2px;
+}
+
+
+
+
+
+
+
 
 
 
