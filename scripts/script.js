@@ -149,13 +149,35 @@ var islandModule = (function(){
 	var luzon_select = function() {
 	
 		$(".select_group").click(function(){
+			
 			$(".main_discussion").hide("fast");
 			$("#group_discussion_content").fadeIn("slow");
+		
+			var group_id = $(this).attr("id");
+		
+			if(group_id == "luzon" || group_id == "luzon_separate") {
+				$("#visayas_group").fadeOut("fast");
+				$("#mindanao_group").fadeOut("fast");
+				$("#luzon_group").fadeIn("fast");
+			}
+			
+			if(group_id == "visayas" || group_id == "visayas_separate" ) {
+				$("#luzon_group").fadeOut("fast");
+				$("#mindanao_group").fadeOut("fast");
+				$("#visayas_group").fadeIn("fast");
+			}
+			
+			if(group_id == "mindanao" || group_id == "mindanao_separate") {
+				$("#luzon_group").fadeOut("fast");
+				$("#visayas_group").fadeOut("fast");
+				$("#mindanao_group").fadeIn("fast");
+			}
+	
 		});
 	}
 	
 	return {
-		luzon_select:	luzon_select
+		luzon_select:		luzon_select
 	}
 	
 })()
@@ -163,6 +185,7 @@ var islandModule = (function(){
 // execute home module below
 
 islandModule.luzon_select();
+
 
 
 
