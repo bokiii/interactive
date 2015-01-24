@@ -18,6 +18,9 @@ var scrollPosition = html.data('scroll-position');
 html.css('overflow', html.data('previous-overflow'));
 window.scrollTo(scrollPosition[0], scrollPosition[1])*/
 
+// below are the global variables
+var selected_group; 
+
 
 var buttonModule = (function(){
 	
@@ -124,8 +127,45 @@ var exchangeModule = (function(){
 	
 	var group_to_start_discussion = function() {
 		$("#big_back").click(function(){
+		
 			$("#group_discussion_content").hide("fast");
 			$(".main_discussion").fadeIn("slow");
+		
+			console.log(selected_group);
+			
+			if(selected_group == "luzon_group") {
+				$("#luzon_group").animate({
+					top: "-=7",
+					left: "+=50",
+					width: "-=100",
+					height: "-=100"
+				}, "fast", function(){
+					console.log("returned to luzon original");
+				});
+			}
+			
+			if(selected_group == "visayas_group") {
+				$("#visayas_group").animate({
+					top: "+=135",
+					left: "+=158",
+					width: "-=100",
+					height: "-=100"
+				}, "fast", function(){
+					console.log("returned to visayas original");
+				});
+			}
+		
+			if(selected_group == "mindanao_group") {
+				$("#mindanao_group").animate({
+					top: "+=250",
+					left: "+=158",
+					width: "-=100",
+					height: "-=100"
+				}, "fast", function(){
+					console.log("returned to mindanao original");
+				});
+			}
+	
 		});
 	};
 	
@@ -156,21 +196,56 @@ var islandModule = (function(){
 			var group_id = $(this).attr("id");
 		
 			if(group_id == "luzon" || group_id == "luzon_separate") {
+				selected_group = "luzon_group";
+				
 				$("#visayas_group").fadeOut("fast");
 				$("#mindanao_group").fadeOut("fast");
-				$("#luzon_group").fadeIn("fast");
+				$("#luzon_group").fadeIn("fast", function(){
+					$(this).animate({
+						top: "+=7",
+						left: "-=50",
+						width: "+=100",
+						height: "+=100"
+					}, 4000, function(){
+						console.log("luzon is complete..");
+					});
+				});
 			}
 			
 			if(group_id == "visayas" || group_id == "visayas_separate" ) {
+				selected_group = "visayas_group";
+				
 				$("#luzon_group").fadeOut("fast");
 				$("#mindanao_group").fadeOut("fast");
-				$("#visayas_group").fadeIn("fast");
+				$("#visayas_group").fadeIn("fast", function(){
+					$(this).animate({
+						top: "-=135",
+						left: "-=158",
+						width: "+=100",
+						height: "+=100"
+					}, 4000, function(){
+						console.log("visayas is complete..");
+					});
+				});
 			}
 			
 			if(group_id == "mindanao" || group_id == "mindanao_separate") {
+				
+				selected_group = "mindanao_group";
+				
 				$("#luzon_group").fadeOut("fast");
 				$("#visayas_group").fadeOut("fast");
-				$("#mindanao_group").fadeIn("fast");
+				$("#mindanao_group").fadeIn("fast", function(){
+					$(this).animate({
+						top: "-=250",
+						left: "-=158",
+						width: "+=100",
+						height: "+=100"
+					}, 4000, function(){
+						console.log("mindanao is complete..");
+					});
+					
+				});
 			}
 	
 		});
