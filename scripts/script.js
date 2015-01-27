@@ -1,3 +1,14 @@
+// below are temporary tests 
+/*$("#luzon_group").animate({
+	top: "+=7",
+	left: "-=50",
+	width: "+=100",
+	height: "+=100"
+}, 4000, function(){
+	console.log("luzon is complete..");
+});*/
+
+//$('#luzon_highlight').maphilight();
 
 // lock scroll position, but retain settings for later
 var scrollPosition = [
@@ -13,10 +24,10 @@ window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
 
 // un-lock scroll position
-/*var html = jQuery('html');
+var html = jQuery('html');
 var scrollPosition = html.data('scroll-position');
 html.css('overflow', html.data('previous-overflow'));
-window.scrollTo(scrollPosition[0], scrollPosition[1])*/
+window.scrollTo(scrollPosition[0], scrollPosition[1])
 
 // below are the global variables
 var selected_group; 
@@ -141,6 +152,7 @@ var exchangeModule = (function(){
 					height: "-=100"
 				}, "fast", function(){
 					console.log("returned to luzon original");
+					$("#luzon_highlight").hide("fast");
 				});
 			}
 			
@@ -186,7 +198,7 @@ exchangeModule.group_to_start_discussion();
 
 var islandModule = (function(){
 
-	var luzon_select = function() {
+	var group_island_select = function() {
 	
 		$(".select_group").click(function(){
 			
@@ -208,6 +220,8 @@ var islandModule = (function(){
 						height: "+=100"
 					}, 4000, function(){
 						console.log("luzon is complete..");
+						$("#luzon_highlight").show("fast");
+						$('#luzon_highlight').maphilight();
 					});
 				});
 			}
@@ -251,15 +265,53 @@ var islandModule = (function(){
 		});
 	}
 	
+	
+	var island_select = function() {
+		
+	};
+	
+	
 	return {
-		luzon_select:		luzon_select
+		group_island_select:		group_island_select,
+		island_select:				island_select
 	}
 	
 })()
 
 // execute home module below
 
-islandModule.luzon_select();
+islandModule.group_island_select();
+islandModule.island_select();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,10 @@
     src: url("../css_fonts/Showcard_Gothic.ttf");
 }
 
+area {
+	cursor: pointer;
+}
+
 .left {
 	float: left;
 }
@@ -328,6 +332,27 @@ body {
 	z-index: 1;
 }
 
+/* below are for the highlights */
+
+#container #group_discussion_content #right_content #highlight_div {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 5;
+	/*border: 1px solid red;*/
+}
+
+
+#container #group_discussion_content #right_content #island_content #luzon_highlight {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	display: none;
+}
+
+/* below are for the islands */
+
 #container #group_discussion_content #right_content #island_content {
 	width: 706px;
 	height: 613px;
@@ -375,6 +400,42 @@ body {
 	z-index: 3;
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
