@@ -1,28 +1,14 @@
-
-/*$("#visayas_group").animate({
-	top: "-=135",
+/*$("#mindanao_group").animate({
+	top: "-=250",
 	left: "-=158",
 	width: "+=100",
 	height: "+=100"
 }, 4000, function(){
-	console.log("visayas is complete..");
-	$("#luzon_highlight").detach();
+	console.log("mindanao is complete..");
 });*/
 
-//$('#visayas_highlight').maphilight();
+/*$('.for_highlight').maphilight();*/
 
-/*$("#luzon_group").animate({
-	top: "+=7",
-	left: "-=50",
-	width: "+=100",
-	height: "+=100"
-}, 4000, function(){
-	console.log("luzon is complete..");
-	$('#luzon_highlight').maphilight();
-});*/
-
-
-//$('#luzon_highlight').maphilight();
 
 // lock scroll position, but retain settings for later
 var scrollPosition = [
@@ -45,8 +31,6 @@ window.scrollTo(scrollPosition[0], scrollPosition[1])
 
 // below are the global variables
 var selected_group; 
-var detach_holder;
-
 
 var buttonModule = (function(){
 	
@@ -239,7 +223,6 @@ var islandModule = (function(){
 						height: "+=100"
 					}, 4000, function(){
 						console.log("luzon is complete..");
-						$("#luzon_highlight").show("fast");
 						$('.for_highlight').maphilight();
 						$(".for_highlight").show("fast");
 					});
@@ -261,7 +244,6 @@ var islandModule = (function(){
 						height: "+=100"
 					}, 4000, function(){
 						console.log("visayas is complete..");
-						$("#visayas_highlight").show("fast");
 						$('.for_highlight').maphilight();
 						$(".for_highlight").show("fast");
 					});
@@ -269,8 +251,9 @@ var islandModule = (function(){
 			}
 			
 			if(group_id == "mindanao" || group_id == "mindanao_separate") {
-				
 				selected_group = "mindanao_group";
+				
+				$(".for_highlight").attr("usemap", "#mindanao_map");
 				
 				$("#luzon_group").fadeOut("fast");
 				$("#visayas_group").fadeOut("fast");
@@ -282,6 +265,8 @@ var islandModule = (function(){
 						height: "+=100"
 					}, 4000, function(){
 						console.log("mindanao is complete..");
+						$('.for_highlight').maphilight();
+						$(".for_highlight").show("fast");
 					});
 					
 				});
