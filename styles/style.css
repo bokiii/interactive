@@ -339,17 +339,17 @@ body {
 	top: 0px;
 	right: 0px;
 	z-index: 5;
-	/*border: 1px solid red;*/
 }
 
 
-#container #group_discussion_content #right_content #island_content #luzon_highlight {
+#container #group_discussion_content #right_content #island_content .for_highlight {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	z-index: 20;
 	display: none;
 }
+
 
 /* below are for the islands */
 

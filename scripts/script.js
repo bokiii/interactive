@@ -1,4 +1,16 @@
-// below are temporary tests 
+
+/*$("#visayas_group").animate({
+	top: "-=135",
+	left: "-=158",
+	width: "+=100",
+	height: "+=100"
+}, 4000, function(){
+	console.log("visayas is complete..");
+	$("#luzon_highlight").detach();
+});*/
+
+//$('#visayas_highlight').maphilight();
+
 /*$("#luzon_group").animate({
 	top: "+=7",
 	left: "-=50",
@@ -6,7 +18,9 @@
 	height: "+=100"
 }, 4000, function(){
 	console.log("luzon is complete..");
+	$('#luzon_highlight').maphilight();
 });*/
+
 
 //$('#luzon_highlight').maphilight();
 
@@ -31,6 +45,7 @@ window.scrollTo(scrollPosition[0], scrollPosition[1])
 
 // below are the global variables
 var selected_group; 
+var detach_holder;
 
 
 var buttonModule = (function(){
@@ -141,9 +156,11 @@ var exchangeModule = (function(){
 		
 			$("#group_discussion_content").hide("fast");
 			$(".main_discussion").fadeIn("slow");
-		
+			
 			console.log(selected_group);
 			
+			$(".for_highlight").hide("fast");
+		
 			if(selected_group == "luzon_group") {
 				$("#luzon_group").animate({
 					top: "-=7",
@@ -152,7 +169,6 @@ var exchangeModule = (function(){
 					height: "-=100"
 				}, "fast", function(){
 					console.log("returned to luzon original");
-					$("#luzon_highlight").hide("fast");
 				});
 			}
 			
@@ -164,6 +180,7 @@ var exchangeModule = (function(){
 					height: "-=100"
 				}, "fast", function(){
 					console.log("returned to visayas original");
+					
 				});
 			}
 		
@@ -210,6 +227,8 @@ var islandModule = (function(){
 			if(group_id == "luzon" || group_id == "luzon_separate") {
 				selected_group = "luzon_group";
 				
+				$(".for_highlight").attr("usemap", "#luzon_map");
+				
 				$("#visayas_group").fadeOut("fast");
 				$("#mindanao_group").fadeOut("fast");
 				$("#luzon_group").fadeIn("fast", function(){
@@ -221,13 +240,16 @@ var islandModule = (function(){
 					}, 4000, function(){
 						console.log("luzon is complete..");
 						$("#luzon_highlight").show("fast");
-						$('#luzon_highlight').maphilight();
+						$('.for_highlight').maphilight();
+						$(".for_highlight").show("fast");
 					});
 				});
 			}
 			
 			if(group_id == "visayas" || group_id == "visayas_separate" ) {
 				selected_group = "visayas_group";
+				
+				$(".for_highlight").attr("usemap", "#visayas_map");
 				
 				$("#luzon_group").fadeOut("fast");
 				$("#mindanao_group").fadeOut("fast");
@@ -239,6 +261,9 @@ var islandModule = (function(){
 						height: "+=100"
 					}, 4000, function(){
 						console.log("visayas is complete..");
+						$("#visayas_highlight").show("fast");
+						$('.for_highlight').maphilight();
+						$(".for_highlight").show("fast");
 					});
 				});
 			}
