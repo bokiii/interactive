@@ -29,7 +29,6 @@
 		
 		<!-- below is the discussion content -->
 		
-		
 		<div id="discussion_content">
 			
 			<!-- below is first rope then luzon -->
@@ -93,6 +92,10 @@
 				
 				<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="right background" id="right_background" class="right" />
 				
+				<div id="island_description">
+					<h1 id="island_title">ISLAND</h1>
+				</div>
+				
 				<div id="highlight_div">
 					<img src="<?php echo base_url(); ?>images/for_highlight.png" width="768" height="675" alt="Highlight" class="for_highlight" usemap="" />
 				</div>
@@ -100,6 +103,7 @@
 				<div class="clear"></div>
 				
 				<!--below is the island content div-->
+				
 				<div id="island_content">
 				
 					<img src="<?php echo base_url(); ?>images/luzon_separate.png" alt="Luzon Group" id="luzon_group" />
@@ -298,12 +302,6 @@
 	</map>
 	
 	
-	
-	
-	
-	
-	
-
 	<!-- below are the scripts -->
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jquery2.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jqueryui.js"></script>

@@ -1,14 +1,3 @@
-/*$("#mindanao_group").animate({
-	top: "-=250",
-	left: "-=158",
-	width: "+=100",
-	height: "+=100"
-}, 4000, function(){
-	console.log("mindanao is complete..");
-});*/
-
-/*$('.for_highlight').maphilight();*/
-
 
 // lock scroll position, but retain settings for later
 var scrollPosition = [
@@ -28,6 +17,20 @@ var html = jQuery('html');
 var scrollPosition = html.data('scroll-position');
 html.css('overflow', html.data('previous-overflow'));
 window.scrollTo(scrollPosition[0], scrollPosition[1])
+
+
+// Below is the delay function
+
+var delay = (function(){
+	
+	var timer = 0;
+	return function(callback, ms){
+		clearTimeout (timer);
+		timer = setTimeout(callback, ms);
+	};
+	
+})();
+
 
 // below are the global variables
 var selected_group; 
@@ -273,10 +276,27 @@ var islandModule = (function(){
 			}
 	
 		});
-	}
+	};
 	
 	
 	var island_select = function() {
+		
+		$("area").mouseenter(function(e){
+			var island_title = $(this).attr("class");
+			var island = island_title.replace("_", " ");
+			$("#island_title").text(island);
+			
+			delay(function(){
+				$("#island_title").fadeIn("slow");
+			}, 700 );
+		
+		}).mouseleave(function(e){
+			
+			delay(function(){
+				$("#island_title").fadeOut("slow");
+			}, 700 );
+			
+		});
 		
 	};
 	
@@ -292,6 +312,9 @@ var islandModule = (function(){
 
 islandModule.group_island_select();
 islandModule.island_select();
+
+
+
 
 
 

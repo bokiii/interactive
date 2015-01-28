@@ -7,6 +7,7 @@ area {
 	cursor: pointer;
 }
 
+
 .left {
 	float: left;
 }
@@ -330,6 +331,31 @@ body {
 	top: -2px;
 	right: -2px;
 	z-index: 1;
+}
+
+/* below are for the island description */
+
+#container #group_discussion_content #right_content #island_description {
+	position: absolute;
+	top: -20px;
+	left: 344px;
+	z-index: 7;
+	text-align: center;
+	padding: 20px;
+	
+}
+
+#container #group_discussion_content #right_content #island_description #island_title {
+	font-family: group_island_font;
+	color: #548700;
+	font-size: 50px;
+	display: none;
+}
+
+#container #group_discussion_content #right_content #island_description .island_title {
+	font-family: group_island_font;
+	color: #548700;
+	font-size: 50px;
 }
 
 /* below are for the highlights */
