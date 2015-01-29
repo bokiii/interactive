@@ -281,19 +281,42 @@ var islandModule = (function(){
 	
 	var island_select = function() {
 		
+		var move_width
+		
 		$("area").mouseenter(function(e){
 			var island_title = $(this).attr("class");
 			var island = island_title.replace("_", " ");
 			$("#island_title").text(island);
 			
 			delay(function(){
-				$("#island_title").fadeIn("slow");
-			}, 700 );
+				
+				$("#island_title").fadeIn("fast").animate({
+					fontSize: "60px",
+				}, 100, function(){
+					$(this).animate({
+						fontSize: "50px"
+					}, 200, function(){
 		
+						move_width = $(this).width() + 150;
+	
+						$("#jeepney").show("fast").animate({
+							left: "+=" + move_width
+						}, 3000);
+				
+					});
+				});
+		
+			}, 1000 );
 		}).mouseleave(function(e){
 			
+			$("#jeepney").fadeOut("fast").animate({
+				left: "210px"
+			}, 100);
+			
 			delay(function(){
-				$("#island_title").fadeOut("slow");
+				
+				$("#island_title").fadeOut("fast");
+				
 			}, 700 );
 			
 		});

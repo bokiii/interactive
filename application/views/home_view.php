@@ -92,6 +92,7 @@
 				
 				<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="right background" id="right_background" class="right" />
 				
+				<img src="<?php echo base_url(); ?>images/jeepney.png" alt="Jeepney" id="jeepney" />
 				<div id="island_description">
 					<h1 id="island_title">ISLAND</h1>
 				</div>

@@ -335,6 +335,14 @@ body {
 
 /* below are for the island description */
 
+#container #group_discussion_content #right_content #jeepney {
+	position: absolute;
+	top: 50px;
+	left: 210px;
+	z-index: 8;
+	display: none;
+}
+
 #container #group_discussion_content #right_content #island_description {
 	position: absolute;
 	top: -20px;
@@ -342,13 +350,12 @@ body {
 	z-index: 7;
 	text-align: center;
 	padding: 20px;
-	
 }
 
 #container #group_discussion_content #right_content #island_description #island_title {
 	font-family: group_island_font;
 	color: #548700;
-	font-size: 50px;
+	font-size: 50px; 
 	display: none;
 }
 
