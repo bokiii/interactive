@@ -80,6 +80,7 @@
 		
 		</div>
 		
+		<!-- below is the group discussion content -->
 		<div id="group_discussion_content">
 			
 			<div id="left_content" class="left">
@@ -118,6 +119,37 @@
 			<div class="clear"></div>
 			
 		</div>
+	
+	
+		<!-- below is the island discussion content -->
+		<div id="island_discussion_content">
+			
+			<div id="island_left_content" class="left">
+				<img src="<?php echo base_url(); ?>images/rope.png" alt="left rope" id="island_left_rope" class="left" />
+				<div class="clear"></div>
+				<img src="<?php echo base_url(); ?>images/big_back.png" alt="Big Back" id="island_big_back" class="left button" />
+				
+				<div id="map_highlight_wrapper">
+					<img src="<?php echo base_url(); ?>images/map_highlight.png" alt="Map Highlight" id="map_highlight" />
+					<img src="<?php echo base_url(); ?>images/map_highlight_board.png" alt="Map Highlight Board" id="map_highlight_board" />
+				</div>
+				
+				<div id="quiz_button_wrapper">
+					<img src="<?php echo base_url(); ?>images/sign_board.png" alt="Sign Board" id="sign_board" />
+					<img src="<?php echo base_url(); ?>images/go.png" alt="Go Button" id="go_exam" class="button" />
+					<img src="<?php echo base_url(); ?>images/tractor.png" alt="Tractor" id="tractor" />
+				</div>
+				
+				
+			</div>
+			
+			<div id="island_right_content" class="right">	
+				<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="right background" id="island_right_background" class="right" />
+			</div>
+			
+		</div>
+	
+	
 	
 	</div> <!-- end container -->
 	

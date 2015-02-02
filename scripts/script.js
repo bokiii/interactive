@@ -185,10 +185,22 @@ var exchangeModule = (function(){
 		});
 	};
 	
+	var specific_island_to_group = function() {
+	
+		$("#island_big_back").click(function(){
+		
+			$("#island_discussion_content").hide("fast");
+			$("#group_discussion_content").fadeIn("slow");
+		
+		});
+	
+	};
+	
 	return {
 		home_to_start_discussion: 	home_to_start_discussion,
 		start_discussion_to_home:	start_discussion_to_home,
-		group_to_start_discussion: group_to_start_discussion
+		group_to_start_discussion:  group_to_start_discussion,
+		specific_island_to_group:	specific_island_to_group
 	}
 	
 })()
@@ -198,6 +210,7 @@ var exchangeModule = (function(){
 exchangeModule.home_to_start_discussion();
 exchangeModule.start_discussion_to_home();
 exchangeModule.group_to_start_discussion();
+exchangeModule.specific_island_to_group();
 
 
 var islandModule = (function(){
@@ -205,6 +218,8 @@ var islandModule = (function(){
 	var group_island_select = function() {
 	
 		$(".select_group").click(function(){
+			
+			$('.for_highlight').hide("fast");
 			
 			$(".main_discussion").hide("fast");
 			$("#group_discussion_content").fadeIn("slow");
@@ -281,11 +296,12 @@ var islandModule = (function(){
 	
 	var island_select = function() {
 		
-		var move_width
+		var move_width;
 		
 		$("area").mouseenter(function(e){
 			var island_title = $(this).attr("class");
-			var island = island_title.replace("_", " ");
+			var island_again = island_title.replace("_", " ");
+			var island = island_again.replace("_", " ");
 			$("#island_title").text(island);
 			
 			delay(function(){
@@ -323,10 +339,22 @@ var islandModule = (function(){
 		
 	};
 	
+	var island_select_click = function() {
+	
+		$("area").click(function(){
+		
+			$("#group_discussion_content").hide("fast");
+			$("#island_discussion_content").fadeIn("slow");
+		
+		});
+		
+	};
+	
 	
 	return {
 		group_island_select:		group_island_select,
-		island_select:				island_select
+		island_select:				island_select,
+		island_select_click: 		island_select_click
 	}
 	
 })()
@@ -335,6 +363,7 @@ var islandModule = (function(){
 
 islandModule.group_island_select();
 islandModule.island_select();
+islandModule.island_select_click();
 
 
 

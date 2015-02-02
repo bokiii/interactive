@@ -112,17 +112,7 @@ body {
 	left: 0px;
 }
 
-/* below are the designs for the discussion content */
-
-/*#container #start_discussion_background {
-	position: relative;
-	top: 0px;
-	left: 0px;
-	width: 1083px;
-	height: 100%;
-	z-index: 0;
-	display: none;
-}*/
+/* below are for the discussion content ----------------------------------------------------------------- */
 
 #container #discussion_content {
 	display: none;
@@ -292,8 +282,11 @@ body {
 	display: none;
 }
 
+/* end discussion content */
 
-/* below is the design for clicking each specific group of island, let us start the z-index to 8 */
+
+
+/* below are for the group discussions content ---------------------------------------------------------------------*/
 
 #container #group_discussion_content {
 	width: 1081px;
@@ -434,13 +427,107 @@ body {
 	display: none;
 }
 
+/* end group discussion content */
 
 
 
+/* below are for the main island discussion ------------------------------------------------------------------------ */
 
 
+#container #island_discussion_content {
+	width: 1081px;
+	height: 668px;
+	position: relative;
+	top: -675px;
+	left: 0px;
+	z-index: 8;
+	/*display: none;*/
+}
+
+#container #island_discussion_content #island_left_content {
+	width: 305px;
+	height: 668px;
+}
+
+#container #island_discussion_content #island_left_content #island_left_rope {
+	margin-left: 84px;
+}
+
+#container #island_discussion_content #island_left_content #island_big_back {
+	margin-left: 35px;
+	margin-top: -28px;
+}
+
+#container #island_discussion_content #island_left_content #map_highlight_wrapper {
+	position: absolute;
+	top: 130px;
+	left: 15px;
+	z-index: 2;
+	height: 391px;
+	width: 272px;
+}
+
+#container #island_discussion_content #island_left_content #map_highlight_wrapper #map_highlight {
+	position: absolute;
+	top: 29px;
+	left: 20px;
+	z-index: 3;
+	width: 230px;
+	height: 333px;
+}
+
+#container #island_discussion_content #island_left_content #map_highlight_wrapper #map_highlight_board {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	width: 270px;
+	height: 389px;
+}
+
+#container #island_discussion_content #island_left_content #quiz_button_wrapper {
+	position: absolute;
+	top: 520px;
+	left: 18px;
+	z-index: 3;
+	width: 280px;
+	height: 140px;
+	
+}
+
+#container #island_discussion_content #island_left_content #quiz_button_wrapper #sign_board {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+
+#container #island_discussion_content #island_left_content #quiz_button_wrapper #go_exam {
+	position: absolute;
+	top: 85px;
+	left: 35px;
+	z-index: 3;
+}
+
+#container #island_discussion_content #island_left_content #quiz_button_wrapper #tractor {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 1;
+}
 
 
+#container #island_discussion_content #island_right_content {
+	width: 768px;
+	height: 668px;
+}
+
+#container #island_discussion_content #island_right_content #island_right_background {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	z-index: 1;
+}
 
 
 
