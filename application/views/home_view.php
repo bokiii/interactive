@@ -203,6 +203,23 @@
 					</div>
 					
 				</div>
+			
+				<div id="slideshow_wrapper">
+					
+					<img src="<?php echo base_url(); ?>images/bamboo_border.png" alt="Bamboo Border" id="bamboo_border" />
+					<img src="<?php echo base_url(); ?>images/next.png" alt="Next Image Button" id="next" class="button" />
+					<img src="<?php echo base_url(); ?>images/previous.png" alt="Previous Image Button" id="previous" class="button" />
+				
+					<div id="slide_images_wrapper">
+						<img src="<?php echo base_url(); ?>images/slideshow_images/image1.jpg" alt="Slideshow Image" class="slideshow_image current" />
+						<img src="<?php echo base_url(); ?>images/slideshow_images/image2.jpg" alt="Slideshow Image" class="slideshow_image" />
+						<img src="<?php echo base_url(); ?>images/slideshow_images/image3.jpg" alt="Slideshow Image" class="slideshow_image" />
+						<img src="<?php echo base_url(); ?>images/slideshow_images/image4.jpg" alt="Slideshow Image" class="slideshow_image" />
+					</div>
+					
+				
+				</div>
+			
 			</div>
 			
 		</div>
