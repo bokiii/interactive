@@ -189,9 +189,14 @@ var exchangeModule = (function(){
 	
 		$("#island_big_back").click(function(){
 		
-			$("#island_discussion_content").hide("fast");
-			$("#group_discussion_content").fadeIn("slow");
-		
+			// return the jeepney to normal
+			$("#jeepney").fadeOut("fast").animate({
+				left: "210px"
+			}, 10, function(){
+				$("#island_discussion_content").hide("fast");
+				$("#group_discussion_content").fadeIn("slow");
+			});
+	
 		});
 	
 	};
@@ -317,18 +322,19 @@ var islandModule = (function(){
 	
 						$("#jeepney").show("fast").animate({
 							left: "+=" + move_width
-						}, 3000);
+						}, 1000);
 				
 					});
 				});
 		
-			}, 1000 );
+			}, 500 );
 		}).mouseleave(function(e){
 			
 			$("#jeepney").fadeOut("fast").animate({
 				left: "210px"
 			}, 100);
 			
+	
 			delay(function(){
 				
 				$("#island_title").fadeOut("fast");
@@ -364,6 +370,60 @@ var islandModule = (function(){
 islandModule.group_island_select();
 islandModule.island_select();
 islandModule.island_select_click();
+
+
+var imagesModule = (function() {
+
+	var hover_images = function() {
+		
+		// below mouseenter
+		$(document).on("mouseenter", ".image_wrap", function(){
+			
+			$(this).children(".frame").animate({
+				width: "120",
+				left: "-12",
+				top: "-10"
+			}, 1000);
+			
+			$(this).children(".island_image").animate({
+				left: "-.5",
+				top: "-.1",
+				width: "98",
+				height: "77"
+			}, 1000);
+	
+		});
+		
+		// below mouseleave
+		$(document).on("mouseleave", ".image_wrap", function(){
+			
+			$(this).children(".frame").animate({
+				width: "96",
+				left: "0",
+				top: "0"
+			}, 1000);
+			
+			$(this).children(".island_image").animate({
+				left: "+9",
+				top: "+9",
+				width: "78",
+				height: "60"
+			}, 1000);
+		
+		});
+		
+	};
+	
+	return {
+		hover_images: 	hover_images
+	}
+	
+})()
+
+// execute images module below 
+
+imagesModule.hover_images();
+
 
 
 

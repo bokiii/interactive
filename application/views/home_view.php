@@ -5,6 +5,7 @@
 	<title>Philippine Interactive Map</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>styles/normalize.css" />
 	<link rel="stylesheet" href="<?php echo base_url(); ?>styles/style.css" />
+	<link rel="stylesheet" href="<?php echo base_url(); ?>video_player/video-js.css" />
 </head>
 <body>
 	
@@ -145,6 +146,63 @@
 			
 			<div id="island_right_content" class="right">	
 				<img src="<?php echo base_url(); ?>images/discuss_background.png" alt="right background" id="island_right_background" class="right" />
+			
+				<div id="left_sidebar">
+				
+					<video id="video" class="video-js vjs-default-skin" controls preload="none" width="210" height="180" data-setup="{}">
+						<source src="<?php echo base_url(); ?>videos/palawan.mp4" type='video/mp4' />
+					</video>
+					
+					<div id="images_wrapper">
+					</div>
+				
+				</div>
+				
+				<div id="wrapper">
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+						<img src="<?php echo base_url(); ?>images/island_images/sample.jpg" alt="Island Image" class="island_image" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+						<img src="<?php echo base_url(); ?>images/island_images/sample.jpg" alt="Island Image" class="island_image" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+					<div class="image_wrap">
+						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
+					</div>
+					
+				</div>
 			</div>
 			
 		</div>
@@ -340,6 +398,7 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jqueryui.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jquery.form.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/highlight.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>video_player/video.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/script.js"></script>
 	
 	
