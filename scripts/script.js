@@ -196,7 +196,9 @@ var exchangeModule = (function(){
 				$("#island_discussion_content").hide("fast");
 				$("#group_discussion_content").fadeIn("slow");
 			});
-	
+			
+			// return the default main content of the island
+			$("#content_back").trigger("click");
 		});
 	
 	};
@@ -420,7 +422,6 @@ var imagesModule = (function() {
 		var last_image = $("#slide_images_wrapper").children(".slideshow_image").last();
 		
 		$("#next").click(function(){
-		
 			var current = $("#slide_images_wrapper").children(".current");
 			var hasNext = current.next().length;
 			
@@ -431,10 +432,8 @@ var imagesModule = (function() {
 				current.removeClass("current");
 				first_image.addClass("current");
 			}
-		
 		});
 		
-	
 		$("#previous").click(function(){
 			var current = $("#slide_images_wrapper").children(".current");
 			var hasPrev = current.prev().length;
@@ -446,17 +445,43 @@ var imagesModule = (function() {
 				current.removeClass("current");
 				last_image.addClass("current");
 			}
-		
-		
 		});
 		
 		
 	};
 	
+	var image_wrap_click = function() {
+		$(document).on("click", ".image_wrap", function(){
+			
+			var src_value = $(this).children(".island_image").attr("src");
+			$("#temp").attr("src", src_value);
+		
+			$("#slideshow_wrapper").hide("fast");
+			$("#buttons_wrapper").hide("fast");
+			$("#main_content_wrapper").hide("fast");
+			
+			$("#selected_image_wrapper").fadeIn("fast");
+			$("#green_board_wrapper").fadeIn("fast");
+		});
+	};
+	
+	var content_back_click = function() {
+		$("#content_back").click(function(){
+			$("#selected_image_wrapper").hide("fast");
+			$("#green_board_wrapper").hide("fast");
+			
+			$("#slideshow_wrapper").fadeIn("fast");
+			$("#buttons_wrapper").fadeIn("fast");
+			$("#main_content_wrapper").fadeIn("fast");
+		});
+	};
+	
 	
 	return {
 		hover_images: 		hover_images,
-		slideshow_images:	slideshow_images
+		slideshow_images:	slideshow_images,
+		image_wrap_click:	image_wrap_click,
+		content_back_click:	content_back_click
 	}
 	
 })()
@@ -465,6 +490,8 @@ var imagesModule = (function() {
 
 imagesModule.hover_images();
 imagesModule.slideshow_images();
+imagesModule.image_wrap_click();
+imagesModule.content_back_click();
 
 
 

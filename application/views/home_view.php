@@ -167,7 +167,7 @@
 					
 					<div class="image_wrap">
 						<img src="<?php echo base_url(); ?>images/frame.png" alt="Frame" class="frame" />
-						<img src="<?php echo base_url(); ?>images/island_images/sample.jpg" alt="Island Image" class="island_image" />
+						<img src="<?php echo base_url(); ?>images/island_images/sample_2.jpg" alt="Island Image" class="island_image" />
 					</div>
 					
 					<div class="image_wrap">
@@ -216,8 +216,43 @@
 						<img src="<?php echo base_url(); ?>images/slideshow_images/image3.jpg" alt="Slideshow Image" class="slideshow_image" />
 						<img src="<?php echo base_url(); ?>images/slideshow_images/image4.jpg" alt="Slideshow Image" class="slideshow_image" />
 					</div>
-					
 				
+				</div>
+				
+				<div id="buttons_wrapper">
+					<a href="#">General Definition</a>
+					<a href="#">History</a>
+					<a href="#">Environment</a>
+				</div>
+				
+				<div id="main_content_wrapper">
+					
+					<div id="content">
+						<img src="<?php echo base_url(); ?>images/content_images/peacock.png" alt="Peacock" class="content_image" />
+						<p>Among the many endemic species are the Palawan Peacoc-pheasant, Philippine Mouse-deer, Philippine Pangolin and Palawan Bearded Pig. In the forests and grasslands, the air resonates with the songs of more than 200 kinds of birds. Over 600 species of butterflies flutter around the mountains and fields of palawan, attracted to some 1500 hosts plants found here. Endangered sea turtles nest on white sand beaches. Dugong numbers have fallen seriously, although palawan still has a larger population than any other part of the country and organizations such as Community centerd</p>
+						
+						<img src="<?php echo base_url(); ?>images/content_images/peacock.png" alt="Peacock" class="content_image" />
+						<p>Among the many endemic species are the Palawan Peacoc-pheasant, Philippine Mouse-deer, Philippine Pangolin and Palawan Bearded Pig. In the forests and grasslands, the air resonates with the songs of more than 200 kinds of birds. Over 600 species of butterflies flutter around the mountains and fields of palawan, attracted to some 1500 hosts plants found here. Endangered sea turtles nest on white sand beaches. Dugong numbers have fallen seriously, although palawan still has a larger population than any other part of the country and organizations such as Community centerd</p>
+						
+					</div>
+					
+				</div>
+			
+				<div id="selected_image_wrapper">
+					<img src="<?php echo base_url(); ?>images/frame_big.png" alt="Frame Big" id="frame_big" />
+					
+					<div id="inner_image_wrapper">
+						<img src="<?php echo base_url(); ?>images/temp.png" alt="Temporary Image" id="temp" />
+					</div>
+				</div>
+			
+				<div id="green_board_wrapper">
+					<img src="<?php echo base_url(); ?>images/green_board.png" alt="Green Board" id="green_board" />
+					<div id="board_content">
+						<h1>Calamian Islands</h1>
+						<p>The Calamian is a group of islands in the Philippine Province of Palawan. It includes: Busuanga Island Coron Island Culion Island Calauit Island Malcapuya Island Banana Island Pass Island Calumbuyan Island several minor Islands.</p>
+					</div>
+					<img src="<?php echo base_url(); ?>images/content_back.png" alt="Back Content" id="content_back" class="button" />
 				</div>
 			
 			</div>
