@@ -18,6 +18,11 @@ var scrollPosition = html.data('scroll-position');
 html.css('overflow', html.data('previous-overflow'));
 window.scrollTo(scrollPosition[0], scrollPosition[1])*/
 
+
+$(document).ready(function(){
+	$("#start_discussion").trigger("click");
+});
+
 // Below is the delay function
 
 var delay = (function(){
@@ -125,7 +130,6 @@ var exchangeModule = (function(){
 			$home_src = $("#home_content_background").attr('src');
 			$("#home_content").hide("fast");
 			$("#home_content_background").attr('src', $("#home_content_background").attr('src').replace(/\home.png/, 'start_discussion_background.png'));
-			
 			$("#discussion_content").fadeIn("slow");
 			
 			
@@ -138,6 +142,18 @@ var exchangeModule = (function(){
 			$("#discussion_content").hide("fast");
 			$("#home_content").fadeIn("slow");
 		});
+	};
+	
+	
+	var logout = function() {
+	
+		$("#logout").click(function(){
+			var redirect = $("#logout_trigger").attr("href");
+			window.location.replace(redirect);
+		});
+	
+		
+	
 	};
 	
 	var group_to_start_discussion = function() {
@@ -209,7 +225,8 @@ var exchangeModule = (function(){
 		home_to_start_discussion: 	home_to_start_discussion,
 		start_discussion_to_home:	start_discussion_to_home,
 		group_to_start_discussion:  group_to_start_discussion,
-		specific_island_to_group:	specific_island_to_group
+		specific_island_to_group:	specific_island_to_group,
+						  logout:	logout
 	}
 	
 })()
@@ -220,6 +237,7 @@ exchangeModule.home_to_start_discussion();
 exchangeModule.start_discussion_to_home();
 exchangeModule.group_to_start_discussion();
 exchangeModule.specific_island_to_group();
+exchangeModule.logout();
 
 
 var islandModule = (function(){

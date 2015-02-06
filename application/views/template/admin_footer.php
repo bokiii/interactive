@@ -188,7 +188,7 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/jquery.form.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/highlight.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>video_player/video.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/script.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>scripts/admin_script.js"></script>
 	
 	
 </body>

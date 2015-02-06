@@ -35,6 +35,17 @@ body {
 	margin: 0px;
 }
 
+#trigger {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: 1px solid red;
+	width: 120px;
+	height: 300px;
+	z-index: 50;
+	display: none;
+}
+
 #container {
 	width: 1083px;
 	margin: 0px auto;
@@ -47,6 +58,11 @@ body {
 
 /* below are the designs for the home content */
 
+
+#container #home_content {
+	/*display: none;*/
+}
+
 #container #home_content_background {
 	position: relative;
 	top: 0px;
@@ -54,10 +70,6 @@ body {
 	width: 1083px;
 	height: 100%;
 	z-index: 0;
-}
-
-#container #home_content {
-	
 }
 
 #container #home_content #start_discussion {
@@ -187,6 +199,14 @@ body {
 	top: -1000px;
 	left: 65px;
 }
+
+#container #discussion_content #logout {
+	position: relative;
+	z-index: 3;
+	top: -1000px;
+	left: 65px;
+}
+
 
 #container #discussion_content #discuss_background {
 	position: relative;

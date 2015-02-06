@@ -1,4 +1,10 @@
 
+	<div id="trigger">
+		<ul>
+			<li><a id="logout_trigger" href="<?php echo base_url(); ?>index.php/logout">Logout</a></li>
+		</ul>
+	</div>
+
 
 	<!-- below is the background for the home-->
 	<img src="<?php echo base_url(); ?>images/home.png" alt="Homepage Background" id="home_content_background" />
@@ -35,7 +41,7 @@
 		
 		<!-- below is fourth rope then back -->
 		<img src="<?php echo base_url(); ?>images/rope.png" alt="fourth rope" id="fourth_rope" class="main_discussion" />
-		<img src="<?php echo base_url(); ?>images/back.png" alt="Home Back" id="home_back" class='button main_discussion' />
+		<img src="<?php echo base_url(); ?>images/logout.png" alt="Logout" id="logout" class='button main_discussion' />
 		
 		
 		<!-- below is for the discuss background -->
